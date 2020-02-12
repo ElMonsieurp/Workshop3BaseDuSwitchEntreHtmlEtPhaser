@@ -1,7 +1,7 @@
 var config = {
 	type: Phaser.AUTO,
-	width: 800,
-	height: 600,
+	width: 1800,
+	height: 890,
 physics: {
         default: 'arcade',
         arcade: {
@@ -23,6 +23,8 @@ function init(){
  	var platforms;
 	var player;
 	var cursors; 
+	var endurance;
+	var sauvefin;
 }
 
 function preload(){
@@ -42,21 +44,41 @@ function create(){
 	platforms.create(100,580,'sol');
 	platforms.create(490,580,'sol');
 	platforms.create(690,580,'sol');
-	platforms.create(600,400,'sol');
+	platforms.create(290,454,'sol');
+	platforms.create(100,454,'sol');
+	platforms.create(490,454,'sol');
+	platforms.create(600,890,'sol');
+	platforms.create(100,890,'sol');
+	platforms.create(300,890,'sol');
+	platforms.create(500,890,'sol');
+	platforms.create(700,890,'sol');
+	platforms.create(900,890,'sol');
+	platforms.create(1100,790,'sol');
+	platforms.create(1300,790,'sol');
+	platforms.create(1500,790,'sol');
+	platforms.create(200,790,'sol');
+	platforms.create(400,790,'sol');
+	platforms.create(600,790,'sol');
+	platforms.create(800,790,'sol');
+	platforms.create(1000,790,'sol');
+	platforms.create(1200,790,'sol');
+	platforms.create(1400,790,'sol');
+	platforms.create(1600,790,'sol');
+	platforms.create(1800,790,'sol');
 	platforms.create(50,250,'sol');
 	this.anims.create({
 		key:'stop',
 		frames: this.anims.generateFrameNumbers('perso', {start: 0, end: 3}),
 		frameRate: 10
 	});
-	player = this.physics.add.sprite(100,450,'perso');
+	player = this.physics.add.sprite(100,500,'perso');
 	player.setCollideWorldBounds(true);
 	player.body.setGravityY(000);
 	this.physics.add.collider(player,platforms);
 	
 	cursors = this.input.keyboard.createCursorKeys(); 
 	dasht= this.input.keyboard.addKey('W');
-	
+	endurance = this.add.text(400,576,'endurance: ', {fontSize: '32px', fill:'#FFF'});
 }
 
 
@@ -79,7 +101,8 @@ function update(){
 	}
 	if (cursors.up.isUp && cursors.down.isUp) {
 	player.setVelocityY(0);	
-	
+
 	
 	}
+	
 }
