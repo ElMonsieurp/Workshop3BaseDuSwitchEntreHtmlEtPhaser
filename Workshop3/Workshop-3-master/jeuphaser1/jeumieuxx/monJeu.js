@@ -212,10 +212,13 @@ function update(){
 	endurance.setText('endurance: 3 dashs ');
 	}
 	if (score==100) {
-		 window.open("html2/page2.html", "_self");
+
 		 etoilee1.destroy(true);
 	}
-	
+	if (player.x<50 && player.y<250) {
+		 window.open("html2/page2.html", "_self");
+	}
+
 }
 
 
