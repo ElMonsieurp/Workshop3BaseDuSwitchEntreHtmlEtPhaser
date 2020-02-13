@@ -7,7 +7,6 @@ let tchoix3 = $('#tchoix3');
 let dchoix1 = $('#dchoix1');
 let dchoix2 = $('#dchoix2');
 let jeuenigme = $('#jeuenigme');
-
 //-------------------------Texte------------------------
 let t = [100];
 t[0] = "texte inutile atm";
@@ -18,7 +17,7 @@ t[4] = "texte4";
 t[5] = "texte5";
 t[6] = "texte6";
 t[7] = "texte7";
-t[8] = "texte8";
+t[8] = "te8";
 t[9] = "texte9";
 t[10] = "texte";
 t[11] = "texte";
